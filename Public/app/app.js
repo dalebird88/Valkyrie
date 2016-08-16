@@ -17,6 +17,11 @@ angular.module('valk', ['ui.router']).config(function($stateProvider, $urlRouter
     templateUrl:'./app/routes/games/games.html',
     controller:'gameCtrl',
   })
+  .state('audioShield', {
+    url:'/audioShield',
+    templateUrl:'./app/routes/audioShield/as.html',
+    controller:'asCtrl',
+  })
 
   $urlRouterProvider.otherwise('/home');
 });
