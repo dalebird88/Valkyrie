@@ -2,8 +2,23 @@
 <html ng-app='valk'>
   <head>
     <meta charset="utf-8">
+    <script src="http://maps.googleapis.com/maps/api/js"></script>
+    <script>
+      function initialize() {
+        var mapProp = {
+          center:new google.maps.LatLng(40.2170879,-111.6650839),
+          zoom:15,
+          mapTypeId:google.maps.MapTypeId.ROADMAP
+        };
+        var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
+      }
+      google.maps.event.addDomListener(window, 'load', initialize);
+    </script>
     <link rel="stylesheet" href="./styles/reset.css">
     <link rel="stylesheet" href="./styles/index.css">
+    <link rel="stylesheet" href="./styles/games.css">
+    <link rel="stylesheet" href="./styles/calenders.css">
+    <link rel="stylesheet" href="./styles/indGame.css">
     <title></title>
   </head>
   <body ng-controller="mainCtrl">
@@ -15,7 +30,6 @@
     </header>
 
       <ui-view></ui-view>
-
 
 
     <footer class="footer">
@@ -38,7 +52,7 @@
   <script src="./app/mainCtrl.js"></script>
   <script src="./app/routes/calender/calCtrl.js"></script>
   <script src="./app/routes/games/gameCtrl.js"></script>
-  <script src="./app/routes/audioShield/asCtrl.js"></script>
+  <script src="./app/routes/indGames/indCtrl.js"></script>
   <!--Services-->
   <script src="./app/services/mainService.js"></script>
   </body>
