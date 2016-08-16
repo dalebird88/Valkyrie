@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html ng-app='valk'>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="./styles/reset.css">
+    <link rel="stylesheet" href="./styles/index.css">
+    <title></title>
+  </head>
+  <body ng-controller="mainCtrl">
+    <header class="header">
+      Hello World
+      <a ui-sref="home">Home</a>
+      <a ui-sref="calender">Calender</a>
+      <a ui-sref="games">Games</a>
+    </header>
+
+      <ui-view></ui-view>
+
+
+
+    <footer class="footer">
+      Contact Us
+    </footer>
+
+  <!-- Libraries-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.js"></script>
+  <!--Controllers-->
+  <script src="./app/app.js"></script>
+  <script src="./app/mainCtrl.js"></script>
+  <script src="./app/routes/calender/calCtrl.js"></script>
+  <script src="./app/routes/games/gameCtrl.js"></script>
+  <!--Services-->
+  <script src="./app/services/mainService.js"></script>
+  </body>
+</html>
