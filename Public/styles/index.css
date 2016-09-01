@@ -1,12 +1,17 @@
 body {
-  background-color: gray;
+  background-color: black;
 }
 .header{
+  display: flex;
+  justify-content: space-around;;
   color: white;
-  height:25px;
+  font-size: 30px;
   width:100vw;
   border-bottom: solid 6px white;
 
+}
+#headerimg{
+  height: 35px;
 }
 .footer{
   color:white;
